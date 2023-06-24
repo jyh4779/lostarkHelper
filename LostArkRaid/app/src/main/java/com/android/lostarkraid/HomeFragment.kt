@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import com.android.lostarkraid.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -17,6 +18,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val mActivity = activity as MainActivity
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.baltanBtn.setOnClickListener {
@@ -50,6 +53,9 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.btHardBtn.setOnClickListener {
+            mActivity.changeFrament("BTHARD1")
+        }
 
         return binding.root
     }

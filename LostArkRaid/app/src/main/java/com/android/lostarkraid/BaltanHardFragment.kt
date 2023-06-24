@@ -1,59 +1,84 @@
 package com.android.lostarkraid
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.android.lostarkraid.databinding.FragmentBaltanHardBinding
+import com.android.lostarkraid.databinding.FragmentHomeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BaltanHardFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BaltanHardFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private lateinit var binding: FragmentBaltanHardBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
-    }
+        binding = FragmentBaltanHardBinding.inflate(inflater, container, false)
+        val mActivity = activity as MainActivity
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BaltanHardFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BaltanHardFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        binding.fourFiveBtn.setOnClickListener {
+            if(binding.fourFiveText.getVisibility() == View.GONE) {
+                binding.fourFiveText.setVisibility(View.VISIBLE)
+                binding.fourFiveBtn.setImageResource(R.drawable.up)
+            } else if(binding.fourFiveText.getVisibility() == View.VISIBLE) {
+                binding.fourFiveText.setVisibility(View.GONE)
+                binding.fourFiveBtn.setImageResource(R.drawable.down)
             }
+        }
+        binding.fourtyBtn.setOnClickListener {
+            if(binding.fourtyText.getVisibility() == View.GONE) {
+                binding.fourtyText.setVisibility(View.VISIBLE)
+                binding.fourtyBtn.setImageResource(R.drawable.up)
+            } else if(binding.fourtyText.getVisibility() == View.VISIBLE) {
+                binding.fourtyText.setVisibility(View.GONE)
+                binding.fourtyBtn.setImageResource(R.drawable.down)
+            }
+        }
+        binding.thirtyBtn.setOnClickListener {
+            if(binding.thirtyText.getVisibility() == View.GONE) {
+                binding.thirtyText.setVisibility(View.VISIBLE)
+                binding.thirtyBtn.setImageResource(R.drawable.up)
+            } else if(binding.thirtyText.getVisibility() == View.VISIBLE) {
+                binding.thirtyText.setVisibility(View.GONE)
+                binding.thirtyBtn.setImageResource(R.drawable.down)
+            }
+        }
+        binding.twoFiveBtn.setOnClickListener {
+            if(binding.twoFiveText.getVisibility() == View.GONE) {
+                binding.twoFiveText.setVisibility(View.VISIBLE)
+                binding.twoFiveBtn.setImageResource(R.drawable.up)
+            } else if(binding.twoFiveText.getVisibility() == View.VISIBLE) {
+                binding.twoFiveText.setVisibility(View.GONE)
+                binding.twoFiveBtn.setImageResource(R.drawable.down)
+            }
+        }
+        binding.oneFiveBtn.setOnClickListener {
+            if(binding.oneFiveText.getVisibility() == View.GONE) {
+                binding.oneFiveText.setVisibility(View.VISIBLE)
+                binding.oneFiveBtn.setImageResource(R.drawable.up)
+            } else if(binding.twoFiveText.getVisibility() == View.VISIBLE) {
+                binding.oneFiveText.setVisibility(View.GONE)
+                binding.oneFiveBtn.setImageResource(R.drawable.down)
+            }
+        }
+        binding.blackBtn.setOnClickListener {
+            if(binding.blackText.getVisibility() == View.GONE) {
+                binding.blackText.setVisibility(View.VISIBLE)
+                binding.blackBtn.setImageResource(R.drawable.up)
+            } else if(binding.blackText.getVisibility() == View.VISIBLE) {
+                binding.blackText.setVisibility(View.GONE)
+                binding.blackBtn.setImageResource(R.drawable.down)
+            }
+        }
+        binding.stageTwo.setOnClickListener{
+            mActivity.changeFrament("BTHARD2")
+        }
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
+        return binding.root
     }
 }

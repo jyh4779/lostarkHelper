@@ -13,8 +13,37 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="발탄 HARD"
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="1관문"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/stageTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/stagetwo"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="추천 배틀아이템"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -32,21 +63,298 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/mulyak"/>
+            android:src="@drawable/seongbu"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/mulyak"/>
+            android:src="@drawable/manneong"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/mulyak"/>
+            android:src="@drawable/heoipok"/>
     </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="18">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 45"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="빨간 루가루 변신"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/fourFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/down" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="보스가 가운데로 이동합니다.\n이후 장판이 생기며 변신을 합니다.\n변신이 끝날쯤 주변이 터지며 캐릭터가 눕게되니 9시에 모여 대기합니다."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 40"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center"
+                    android:text="파괴자 루카스 난입"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/fourtyBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourtyText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="파괴자 루카스가 난입한다는 가이드가 나옵니다.\n파란색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 파란 늑대를,\n생기지 않았다면 빨간 늑대를 공격합니다."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 30"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="구슬 먹기"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/thirtyBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/thirtyText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="붉은 결속을 준비한다는 가이드가 나옵니다.\n시작 전 정했던 자리에서 대기하며 구슬을 먹습니다.\n구슬을 먹고나면 보스에게 회폭을 던진 후 무력화스킬을 사용합니다."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="left|center"
+                    android:text="Line 25"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="통솔자 루카스 난입"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/twoFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/twoFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="통솔자 루카스가 난입한다는 가이드가 나옵니다.\n빨간색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 빨간 늑대를,\n생기지 않았다면 파란 늑대를 공격합니다."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 15"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="구슬 먹기"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/oneFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/oneFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="푸른 결속을 준비한다는 가이드가 나옵니다.\n시작 전 정했던 자리에서 대기하며 구슬을 먹습니다.\n구슬을 먹고나면 보스에게 회폭을 던진 후 무력화스킬을 사용합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 15 후"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="검은늑대 변신"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/blackBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/blackText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="15줄 구슬먹기를 성공하면 보스가 변신합니다.\n보스가 포효하며 주변에 장풍을 날리며,\n바닥이 폭발합니다.\n맵 6시 끝에 모이면 폭발피해를 받지 않습니다."/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
